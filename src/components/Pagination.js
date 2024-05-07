@@ -16,7 +16,8 @@ const PerPage = () => {
       inputRef.current.value = val;
     }
   }
-  return (<>
+  return (
+  <div className='hidden md:block'>
    <form 
         className='relative flex items-center font-nunito mr-12'
         onSubmit={handleperpage}
@@ -45,7 +46,7 @@ const PerPage = () => {
             className='w-full h-auto '/>
           </button>
         </form>
-  </>)
+  </div>)
 }
 
 const Pagination = () => {
@@ -89,7 +90,7 @@ const Pagination = () => {
   
   
     return (
-      <div className='flex items-center'>
+      <div className='flex items-center '>
         <PerPage />
           <ul className='flex items-center justify-end text-base'>
               <li>

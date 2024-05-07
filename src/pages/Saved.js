@@ -57,10 +57,10 @@ const Saved = () => {
                 <th className='py-1'>Name</th>
                 <th className='py-1'>Price</th>
                 <th className='py-1'> Tolal Volume</th>
-                <th className='py-1'>Market Cap</th>
-                <th className='py-1'>1H</th>
-                <th className='py-1'>24H</th>
-                <th className='py-1'>7D</th>
+                <th className='py-1 lg:table-cell hidden'>Market Cap</th>
+                <th className='py-1 lg:table-cell hidden'>1H</th>
+                <th className='py-1 lg:table-cell hidden'>24H</th>
+                <th className='py-1 lg:table-cell hidden'>7D</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,15 +89,15 @@ const Saved = () => {
                  }
                   </td>
                   <td className='py-4'>{data.total_volume}</td>
-                  <td className='py-4'>{data.market_cap_change_percentage_24h}%</td>
+                  <td className='py-4 lg:table-cell hidden'>{data.market_cap_change_percentage_24h}%</td>
                   <td className={
-                    data.price_change_percentage_1h_in_currency > 0 ? `text-green` : `text-red` 
+                    data.price_change_percentage_1h_in_currency > 0 ? `text-green lg:table-cell hidden` : `text-red lg:table-cell hidden` 
                    }>{Number(data.price_change_percentage_1h_in_currency).toFixed(2)}</td>
                   <td className={
-                    data.price_change_percentage_1h_in_currency > 0 ? `text-green` : `text-red` 
+                    data.price_change_percentage_1h_in_currency > 0 ? `text-green lg:table-cell hidden` : `text-red lg:table-cell hidden` 
                    }>{Number(data.price_change_percentage_24h_in_currency).toFixed(2)}</td>
                   <td className={
-                    data.price_change_percentage_1h_in_currency > 0 ? `text-green` : `text-red` 
+                    data.price_change_percentage_1h_in_currency > 0 ? `text-green lg:table-cell hidden` : `text-red lg:table-cell hidden` 
                    }>{Number(data.price_change_percentage_7d_in_currency).toFixed(2)}</td>
                   </tr>
                 })
@@ -108,7 +108,7 @@ const Saved = () => {
         
         <button 
         onClick={resetSavedResult}
-        className='h-[2rem] absolute right-0'>
+        className='h-[2rem] absolute right-0 hidden md:block'>
         <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"

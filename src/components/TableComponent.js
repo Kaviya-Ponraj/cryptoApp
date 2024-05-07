@@ -58,7 +58,7 @@ const {cryptoData, currency} = useContext(CryptoContext)
                 <th className='py-1'>Name</th>
                 <th className='py-1'>Price</th>
                 <th className='py-1'> Tolal Volume</th>
-                <th className='py-1'>Market Cap</th>
+                <th className='py-1 lg:table-cell hidden'>Market Cap</th>
                 <th className='py-1 lg:table-cell hidden'>1H</th>
                 <th className='py-1 lg:table-cell hidden'>24H</th>
                 <th className='py-1 lg:table-cell hidden'>7D</th>
@@ -90,7 +90,7 @@ const {cryptoData, currency} = useContext(CryptoContext)
                  }
                   </td>
                   <td className='py-4'>{data.total_volume}</td>
-                  <td className='py-4'>{data.market_cap_change_percentage_24h}%</td>
+                  <td className='py-4 lg:table-cell hidden'>{data.market_cap_change_percentage_24h}%</td>
                   <td className={
                     data.price_change_percentage_1h_in_currency > 0 ? `text-green lg:table-cell hidden` : `text-red lg:table-cell hidden` 
                    }>{Number(data.price_change_percentage_1h_in_currency).toFixed(2)}</td>
@@ -120,7 +120,7 @@ const {cryptoData, currency} = useContext(CryptoContext)
       
 
     </div>
-    <div className='flex items-center justify-between mt-4 capitalize h-[2rem] '>
+    <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-2 md:gap-0 mt-12 md:mt-4 capitalize h-[2rem] '>
       <span>Data provided by <a className='text-cyan' href="http://www.coingecko.com" target="_blank" rel="noopener noreferrer">Coingecko</a></span>
     <Pagination />
     </div>

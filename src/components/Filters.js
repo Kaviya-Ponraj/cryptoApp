@@ -31,10 +31,10 @@ const Filters = () => {
         <Search />
 
         {/* currency change */}
-
+        <div className="hidden md:block">
         <div className="flex mr-7">
         <form 
-        className='relative flex items-center font-nunito mr-12'
+        className=' relative flex items-center font-nunito mr-12'
         onSubmit={handleCurrencySubmit}
         >
           <label 
@@ -112,6 +112,7 @@ const Filters = () => {
       </button>
         </div>
 
+        </div>
       
        
     </div>

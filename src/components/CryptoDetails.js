@@ -41,11 +41,12 @@ const CryptoDetails = () => {
     }
 
   return ReactDOM.createPortal(
-    <div className='fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 backdrop-blur-sm flex items-center justify-center font-nunito '
+    <div className="hidden md:block">
+    <div className=' fixed top-0 w-full h-full bg-gray-200 bg-opacity-30 backdrop-blur-sm flex items-center justify-center font-nunito '
     onClick={close}
     >
         <div 
-        className="w-[72%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative"
+        className="hidden md:block w-[72%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative"
         onClick={(e) => e.stopPropagation()}
         >
         {
@@ -229,8 +230,9 @@ const CryptoDetails = () => {
                             </div>
                         </div> */}
                     </div>
-
-                    <div className="flex flex-col w-[55%] h-full pl-3 ">
+                    
+                    <div className="hidden md:block">
+                    <div className=" flex flex-col w-[55%] h-full pl-3 ">
                         <Chart id = {data.id}/>
 
                         <div className="flex flex-col mt-4">
@@ -247,10 +249,12 @@ const CryptoDetails = () => {
                                 </a> 
                         </div>
                     </div>
+                    </div>
                 </div>
             ) : null
         }
         </div>
+       </div>
        </div>,
     document.getElementById("modal")
   )
