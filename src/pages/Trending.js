@@ -14,7 +14,7 @@ const Trending = () => {
   const {trendingData} = useContext(TrendingContext)
   console.log("trending", trendingData)
 
-  return (<section className='w-[90%] h-full flex flex-col items-center md:flex-wrap mt-16 mb-24 relative border rounded-lg p-10' >
+  return (<section className='hidden md:block w-[90%] h-full flex flex-col items-center md:flex-wrap mt-16 mb-24 relative border rounded-lg p-10' >
         <div
         
         className="border w-[95%] bg-gray-100 flex flex-col items-center md:flex-wrap justify-center gap-[10%] rounded-lg p-6 m-5 bg-opacity-35">

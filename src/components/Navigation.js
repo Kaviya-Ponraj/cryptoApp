@@ -19,7 +19,7 @@ const Navigation = () => {
         <NavLink 
         to="/trending"
         className={({isActive}) => {
-            return `w-full text-center font-nunito text-base m-2.5  border-0 cursor-pointer rounded capitalize font-semibold ${isActive ? 'bg-cyan text-gray-300' : 'bg-gray-200 text-gray-100 hover:text-cyan active:text-gray-300 active:bg-cyan'}`
+            return `hidden md:block w-full text-center font-nunito text-base m-2.5  border-0 cursor-pointer rounded capitalize font-semibold ${isActive ? 'bg-cyan text-gray-300' : 'bg-gray-200 text-gray-100 hover:text-cyan active:text-gray-300 active:bg-cyan'}`
         }}
         >
             trending

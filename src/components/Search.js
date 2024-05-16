@@ -33,7 +33,7 @@ const SearchInput = ({handleSearch}) => {
     onSubmit={handleSubmit}
     >
         
-        <input className='w-full rounded bg-gray-200
+        <input className='max-w-full md:w-full rounded bg-gray-200
          placeholder:text-gray-100 md:pl-2 required outline-0 border border-tranperent
          focus:border-cyan' 
          placeholder='Search here...' 
@@ -43,8 +43,8 @@ const SearchInput = ({handleSearch}) => {
             value={SearchText}
           />
         
-        <button type='submit' className='absolute right-1 cursor-pointer'>
-            <img src={SearchIcon} alt="search" className='w-full h-auto'/>
+        <button type='submit' className=' absolute right-1 cursor-pointer'>
+            <img src={SearchIcon} alt="search" className='w-full h-auto hidden md:block'/>
         
         </button>
     </form>
